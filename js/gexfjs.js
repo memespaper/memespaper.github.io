@@ -643,10 +643,11 @@
         GexfJS.timeRefresh = setInterval(traceMap, 60);
         GexfJS.graph = null;
         loadGraph();
+
     }
 
     function loadGraph() {
-
+        $("#zonecentre").css('display','none');
         var url = (document.location.hash.length > 1 ? document.location.hash.substr(1) : GexfJS.params.graphFile);
         var isJson = (function (t) { return t[t.length - 1]; })(url.split('.')) === 'json';
 
@@ -777,6 +778,10 @@
                     });
                 }
                 measureTime("Pre-processing graph");
+                $("#zonecentre").css('display','block');
+                document.getElementById("loader-box").style.display = 'none';
+                //alert('Finished!');
+
 
                 GexfJS.ctxMini.clearRect(0, 0, GexfJS.overviewWidth, GexfJS.overviewHeight);
 
