@@ -284,8 +284,8 @@ a:hover {
 .loading {
     display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 45%;
     margin: -25px 0 0 -46px;
     width: 80px;
     padding: 10px;
@@ -300,16 +300,21 @@ a:hover {
 }
 .loading div {
     position: relative;
-    top: 2px;
+    top: 10px;
     text-transform: uppercase;
     font: 10px/1.21 'Helvetica Neue', helvetica, arial, sans-serif;
     letter-spacing: 0.04em;
     color: #888;
+    width: 200px;
+    text-align:center;
+    font-size: 11px;
 }
 .loading.dark {
     background: linear-gradient(to bottom, #555, #333);
     border-color: #444;
     border-bottom-color: #111;
+    height:80px;
+    width:200px;
 }
 
     .loading.dark .spinner {
@@ -322,9 +327,9 @@ a:hover {
 
 .spinner {
     display: inline-block;
-    width: 14px;
-    height: 14px;
-    border: 1px solid rgba(0,0,0,0.8);
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0,0,0,0.8);
     border-left-color: rgba(0,0,0,0.6);
     border-bottom-color: rgba(0,0,0,0.4);
     border-right-color: rgba(0,0,0,0.2);
